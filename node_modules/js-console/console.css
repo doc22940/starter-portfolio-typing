@@ -1,0 +1,55 @@
+pre a {
+    cursor: pointer;
+}
+
+.console-background {
+    background-color: #080808;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    min-height: 96vh;
+    margin: 0;
+
+    background-image: radial-gradient(
+        rgba(0, 150, 0, 0.20), black 120%
+    );
+}
+
+.console {
+    text-shadow: 0 0 3px #C8C8C8;
+    font: 1.3rem Inconsolata, monospace;
+    color: #dddddd;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+.console-input {
+    background-color: #000000;
+    border: 0;
+    width: 0.0001vw;
+    height: 0.0001vh;
+    resize: none;
+    opacity: 0;
+}
+
+.console::after {
+    content: "|";
+    animation: blinker 1.4s linear infinite;
+    margin-left: -0.15em;
+    font-weight: bold;
+}
+
+@keyframes blinker {
+    0% {
+        visibility: hidden;
+    }
+    50% {
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}

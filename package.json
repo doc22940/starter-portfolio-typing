@@ -4,7 +4,6 @@
   "description": "Programmer's biography for Michael Smith, from February 2020",
   "main": "index.html",
   "scripts": {
-    "start": "node_modules/http-server/bin/http-server",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,7 +15,6 @@
   "author": "Michael Smith <michael.smith.ok@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "http-server": "^0.12.1",
     "js-console": "git+https://git.smwa.me/smwa/js-console.git"
   }
 }
