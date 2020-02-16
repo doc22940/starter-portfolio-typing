@@ -15,6 +15,6 @@
   "author": "Michael Smith <michael.smith.ok@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "js-console": "git+https://git.smwa.me/smwa/js-console.git"
+    "js-console": "git+https://github.com/smwa/js-console"
   }
 }
