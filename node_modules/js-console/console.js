@@ -26,11 +26,12 @@ function initializeConsole(container, onCarriageReturn) {
 
     var toWrite = '';
     setInterval(function() {
-        if (toWrite.length < 20 && Math.random() > 0.55) return;
-        for (var i = 0; i <= toWrite.length / 700; i++) {
-            writeNextCharacter()
+        for (var i = 0; i <= toWrite.length / 20; i++) {
+            writeNextCharacter();
+            writeNextCharacter();
+            writeNextCharacter();
         }
-    }, 4);
+    }, 32);
 
     function writeNextCharacter() {
         if (toWrite.length < 1) return;
