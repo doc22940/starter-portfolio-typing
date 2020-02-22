@@ -16,8 +16,5 @@
   "license": "MIT",
   "dependencies": {
     "js-console": "git+https://github.com/smwa/js-console"
-  },
-  "devDependencies": {
-    "node-minify": "^3.6.0"
   }
 }
