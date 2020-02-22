@@ -7,6 +7,7 @@ function put(text) {
 
 put("<h2>Michael Smith</h2>");
 put("<a href='mailto:michael.smith.ok@gmail.com' target='_blank'>michael.smith.ok@gmail.com</a>");
+put("\n<a href='https://github.com/smwa/' target='_blank'>github.com/smwa</a>");
 put("\nOklahoma City, OK, United States");
 
 put("\n\n");
@@ -66,7 +67,6 @@ var educations = [
     ]],
     ["Master of Computer Science<br>  from <a href='https://go.okstate.edu/' target='_blank'>Oklahoma State University</a>", [
         "Project lead on \"Course Prerequisite\" project",
-        "Android Development",
         "Project Management",
     ]],
 ];
@@ -74,9 +74,23 @@ educations.forEach(function(education){
     put("<ul><li>" + arrayToHtml(education) + "</li></ul>\1");
 });
 
-
 put("\n");
 
+put("<h3>Notable Projects</h3>\1");
+var projects = [
+    ['<a href="https://github.com/smwa/courses" target="_blank">Course Prerequisite Confirmation</a>', [
+        'Built for the Spears School of Business, this project helps the college by creating a report of each student that has failed a course that is a prerequisite for a course that they are registered in for the following semester',
+        'Uses Spark Java Web Server',
+        'Uses SQLite database',
+        'I Built custom framework to improve collaboration',
+        'I led the team of 3 developers'
+    ]],
+];
+projects.forEach(function(item){
+    put("<ul><li>" + arrayToHtml(item) + "</li></ul>\1");
+});
+
+put("\n");
 
 put("\nhelp\0");
 
