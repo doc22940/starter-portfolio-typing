@@ -1,6 +1,6 @@
 var commands = {};
 
-commands.help = (words) => "<p>Feel free to type in one of the following commands, or give them a click! You can also write html</p>\n\1" + Object.keys(commands).map(function(cmd) {
+commands.help = (words) => "<p>Feel free to type in one of the following commands, or give them a click!</p>\n\1" + Object.keys(commands).map(function(cmd) {
     return "<a onclick='writer(\""+cmd+"\", true)'>"+cmd+"</a>";
 } ).join("\t");
 
