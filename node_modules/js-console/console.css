@@ -16,10 +16,14 @@ pre a:hover {
     padding-top: 2vh;
     padding-bottom: 2vh;
     min-height: 96vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
 
     background-image: radial-gradient(
-        rgba(0, 150, 0, 0.20), black 120%
+        rgba(0, 150, 0, 0.25), black 120%
     );
 }
 

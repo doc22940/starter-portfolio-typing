@@ -2,16 +2,10 @@ var biographyText = "";
 
 function put(text) {
     biographyText += text;
-    writer(text);
 }
 
 put("<h2>Michael Smith</h2>");
-put("<a href='mailto:michael.smith.ok@gmail.com' target='_blank'>michael.smith.ok@gmail.com</a>");
-put("\n<a href='https://github.com/smwa/' target='_blank'>github.com/smwa</a>");
-put("\nOklahoma City, OK, United States");
-
-put("\n\n");
-
+put("Oklahoma City, Oklahoma, United States\n\n");
 
 put("<h3>Skills</h3>");
 var skills = [
@@ -90,9 +84,9 @@ projects.forEach(function(item){
     put("<ul><li>" + arrayToHtml(item) + "</li></ul>\1");
 });
 
-put("\n");
+put("\n\n");
 
-put("\nhelp\0");
+put("help\0");
 
 
 function arrayToHtml(array) {

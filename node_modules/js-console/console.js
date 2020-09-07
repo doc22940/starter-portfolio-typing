@@ -26,14 +26,17 @@ function initializeConsole(container, onCarriageReturn) {
 
     var toWrite = '';
     setInterval(function() {
-        writeNextCharacter();
-        writeNextCharacter();
-        writeNextCharacter();
-        writeNextCharacter();
-        writeNextCharacter();
-        writeNextCharacter();
-        writeNextCharacter();
-    }, 32);
+        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+            window.scrollTo({
+                left: 0,
+                top: document.body.scrollHeight,
+                behavior: 'smooth',
+              });
+        }
+        for (var i = 0; i < 3; i++) {
+            writeNextCharacter();
+        }
+    }, 20);
 
     function writeNextCharacter() {
         if (toWrite.length < 1) return;

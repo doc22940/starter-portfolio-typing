@@ -12,3 +12,7 @@ var writer = initializeConsole(document.body, function(line) {
         }
     }
 });
+writer("whoami", true);
+setTimeout(() => {
+    writer("help", true);
+}, 1000);
