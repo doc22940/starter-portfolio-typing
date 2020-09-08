@@ -11,6 +11,7 @@ function initializeConsole(container, onCarriageReturn) {
     // https://bugzilla.mozilla.org/show_bug.cgi?id=1425291
     var input = document.createElement('textarea');
     input.setAttribute("autocapitalize", "none");
+    input.setAttribute("spellcheck", "false");
     input.classList.add('console-input');
     container.appendChild(input);
 
