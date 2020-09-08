@@ -28,14 +28,14 @@ function initializeConsole(container, onCarriageReturn) {
     var innerHeight = window.innerHeight;
     var toWrite = '';
     setInterval(function() {
-        if (window.innerHeight !== innerHeight && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
-            innerHeight = window.innerHeight;
+        if (window.innerHeight > innerHeight && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
             window.scrollTo({
                 left: 0,
                 top: document.body.scrollHeight,
                 behavior: 'smooth',
             });
         }
+        innerHeight = window.innerHeight;
         for (var i = 0; i < 7; i++) {
             writeNextCharacter();
         }
