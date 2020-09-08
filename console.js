@@ -24,19 +24,33 @@ function initializeConsole(container, onCarriageReturn) {
         return txt.value;
     };
 
+    var innerHeight = window.innerHeight;
     var toWrite = '';
     setInterval(function() {
-        if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+        if (window.innerHeight !== innerHeight && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+            innerHeight = window.innerHeight;
             window.scrollTo({
                 left: 0,
                 top: document.body.scrollHeight,
                 behavior: 'smooth',
-              });
+            });
         }
-        for (var i = 0; i < 3; i++) {
+        for (var i = 0; i < 7; i++) {
             writeNextCharacter();
         }
-    }, 20);
+    }, 50);
+
+    setInterval(() => {
+        if (toWrite.length > 0 && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+            setTimeout(() => {
+                window.scrollTo({
+                    left: 0,
+                    top: document.body.scrollHeight,
+                    behavior: 'smooth',
+                  });
+            }, 75);
+        }
+    }, 210);
 
     function writeNextCharacter() {
         if (toWrite.length < 1) return;
