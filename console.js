@@ -25,38 +25,29 @@ function initializeConsole(container, onCarriageReturn) {
         return txt.value;
     };
 
-    var innerHeight = window.innerHeight;
+    var offsetHeight = document.body.offsetHeight;
     var toWrite = '';
     setInterval(function() {
-        if (window.innerHeight > innerHeight && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+        if (document.body.offsetHeight > offsetHeight && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
             window.scrollTo({
                 left: 0,
                 top: document.body.scrollHeight,
                 behavior: 'smooth',
             });
+            offsetHeight = document.body.offsetHeight;
         }
-        innerHeight = window.innerHeight;
-        for (var i = 0; i < 7; i++) {
+        else if (document.body.offsetHeight < offsetHeight) {
+            offsetHeight = document.body.offsetHeight;
+        }
+        for (var i = 0; i < 3; i++) {
             writeNextCharacter();
         }
-    }, 50);
-
-    setInterval(() => {
-        if (toWrite.length > 0 && (window.innerHeight + window.scrollY) < document.body.offsetHeight) {
-            setTimeout(() => {
-                window.scrollTo({
-                    left: 0,
-                    top: document.body.scrollHeight,
-                    behavior: 'smooth',
-                  });
-            }, 75);
-        }
-    }, 210);
+    }, 15);
 
     function writeNextCharacter() {
         if (toWrite.length < 1) return;
         var c = toWrite[0];
-        toWrite = toWrite.substr(1, toWrite.length - 1);
+        toWrite = toWrite.substr(1);
         if (c === "\0") {
             var lines = consoleElement.innerHTML.split("\n");
             var line = lines[lines.length - 1];
@@ -83,6 +74,7 @@ function initializeConsole(container, onCarriageReturn) {
 
     input.oninput = function(e) {
         var newCharacter = input.value;
+        newCharacter = newCharacter.substr(newCharacter.length - 1);
         if (isNewLine(newCharacter)) {
             toWrite += "\0";
         }

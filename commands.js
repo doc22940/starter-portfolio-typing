@@ -21,6 +21,7 @@ commands.find_me = (words) => {
         "<img src='icons/facebook_32.png'/> <a href='https://www.facebook.com/michael.w.smith.ok/' target='_blank'>facebook.com/michael.w.smith.ok</a>",
         "<img src='icons/snapchat.png'/> <a href='https://www.snapchat.com/add/michaelsmith.ok' target='_blank'>snapchat.com/add/michaelsmith.ok</a>",
         "<img src='icons/twitter.png'/> <a href='https://twitter.com/smwa_ok' target='_blank'>twitter.com/smwa_ok</a>",
+        "<img src='icons/linkedin.png'/> <a href='https://linkedin.com/in/michael-smith-ok' target='_blank'>linkedin.com/in/michael-smith-ok</a>",
         "<img src='icons/steam.png'/> <a href='https://steamcommunity.com/profiles/76561198011969367/' target='_blank'>steamcommunity.com/profiles/76561198011969367/</a>",
         "<img src='icons/spotify.png'/> <a href='https://open.spotify.com/user/michael.smith.ok' target='_blank'>open.spotify.com/user/michael.smith.ok</a>",
         "<img src='icons/bitcoin.png'/> <a href='bitcoin:bc1qgtmffjw542zqek7snj3np4uy8py4au4jvuknjp' target='_blank'>bitcoin:bc1qgtmffjw542zqek7snj3np4uy8py4au4jvuknjp</a>",
