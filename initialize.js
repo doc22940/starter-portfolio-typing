@@ -6,6 +6,9 @@ var writer = initializeConsole(document.body, function(line) {
     
     var command = words[0].toLowerCase();
     if (commands[command]) {
+        if (command !== 'help') {
+          window.location.hash = words.join('-')
+        }
         var result = commands[command](words);
         if (result) {
             writer(result + "\n");
@@ -13,6 +16,12 @@ var writer = initializeConsole(document.body, function(line) {
     }
 });
 writer("whoami", true);
+
+var hashLocation = window.location.hash.replace('#', '').replace(/\-/, ' ')
+setTimeout(() => {
+    writer(hashLocation, true)
+}, 200);
+
 setTimeout(() => {
     writer("help", true);
-}, 1000);
+}, 1200);

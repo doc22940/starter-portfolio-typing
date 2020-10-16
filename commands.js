@@ -13,7 +13,7 @@ commands.clear = function(words) {
     return "help\0";
 };
 
-commands.find_me = (words) => {
+commands.findme = (words) => {
     var html = "";
     var contactPoints = [
         "📧 <a href='mailto:michael.smith.ok@gmail.com' target='_blank'>michael.smith.ok@gmail.com</a>",
